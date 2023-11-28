@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>ToDo List</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="section-center">
+        <form class="form" novalidate>
+          <div class="warning hide"></div>
+          <div class="text-content">
+            <h1>ToDo List</h1>
+          </div>
+
+          <div class="form-field">
+            <label for="task">Task</label>
+            <input
+              type="text"
+              id="task"
+              placeholder="e.g. Meeting at 10"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="priority">Priority </label>
+            <select name="priority" id="priority">
+              <option value="">Select Priority</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="task-date">Event Date</label>
+            <input type="date" id="task-date" name="task-date" required />
+          </div>
+
+          <button type="submit" class="btn">Add Item</button>
+        </form>
+
+        <section class="todo-list">
+          <div class="btn-container">
+            <button type="button" class="active-btn" data-id="todo">
+              To Do
+            </button>
+            <button type="button" data-id="doing">Doing</button>
+            <button type="button" data-id="completed">Completed</button>
+          </div>
+
+          <section class="sort-data">
+            <p>Sort by:</p>
+            <form class="sort-form">
+              <select name="" id="sort-priority">
+                <option value="">Select Priority</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+
+              <input type="date" name="sort-date" id="sort-date" />
+            </form>
+          </section>
+
+          <div class="tasks"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
